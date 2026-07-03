@@ -1,125 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Nhat Minh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+:root {
+    --bg-color: #faf9f6;
+    --text-color: #2b2d42;
+    --text-muted: #6c757d;
+    --accent-color: #1b4332;
+    --accent-light: #e9f5ed;
+    --border-color: #e5e5e5;
+    --card-bg: #ffffff;
+    --max-width: 800px;
+}
 
-    <header>
-        <div class="container">
-            <div class="profile-cover-container">
-                <img src="your-image.jpg" alt="Nguyen Nhat Minh" class="profile-cover-img">
-            </div>
-            
-            <div class="header-text">
-                <h1>Nguyen Nhat Minh</h1>
-                <p class="subtitle">Software Engineering Student @ SKKU | AI & NLP Researcher</p>
-                <div class="social-links">
-                    <a href="link-to-your-cv.pdf" target="_blank" title="CV"><i class="fas fa-file-alt"></i> CV</a>
-                    <a href="mailto:your.email@email.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://github.com/nminh27" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </header>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <main class="container">
-        
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a Software Engineering undergraduate at Sungkyunkwan University with a strong focus on Artificial Intelligence and Natural Language Processing (NLP). I am passionate about exploring the nuances of machine learning, particularly in large language models (LLMs) alignment and cultural representation. Beyond writing code, I constantly re-evaluate current evaluation concepts to build AI systems that are not only computationally efficient but also culturally aware and socially beneficial.</p>
-        </section>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0;
+}
 
-        <section id="experience">
-            <h2>Research & Experience</h2>
-            <div class="card">
-                <div class="card-header">
-                    <h3>Research Intern</h3>
-                    <span class="date">Jun 2025 – Sep 2025</span>
-                </div>
-                <p class="organization">Human Language Intelligence (HLI) Lab, SKKU</p>
-                <ul class="bullet-points">
-                    <li><strong>Pipeline Implementation:</strong> Assisted in implementing masked language modeling pipelines using PyTorch and Hugging Face Transformers for Vietnamese NLP research.</li>
-                    <li><strong>Model Fine-Tuning & Data Processing:</strong> Handled data preprocessing and participated in fine-tuning BERT models, contributing to experiments focused on cultural knowledge evaluation.</li>
-                    <li><strong>Evaluation Metric Contribution:</strong> Contributed to the development and testing of the Cultural Bias Score (CBS), assisting the research team in evaluating cultural bias in LLMs.</li>
-                </ul>
-            </div>
-        </section>
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="card">
-                <div class="card-header">
-                    <h3>Hardware & Systems Engineering (Capstone Project)</h3>
-                    <span class="date">2026</span>
-                </div>
-                <ul class="bullet-points">
-                    <li><strong>Component Assembly:</strong> Selected and integrated hardware components (Raspberry Pi, facial recognition modules, QR scanners) while adhering to budget constraints.</li>
-                    <li><strong>Prototyping:</strong> Modeled and 3D-printed custom housing components for the system prototype.</li>
-                    <li><strong>System Testing:</strong> Conducted functionality tests and troubleshot software-hardware integration issues to ensure system stability.</li>
-                </ul>
-            </div>
-        </section>
+header {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #ffffff;
+}
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="card">
-                <div class="card-header">
-                    <h3>Sungkyunkwan University (SKKU)</h3>
-                    <span class="date">2024 – Present</span>
-                </div>
-                <p class="degree">B.S. in Software Engineering (Undergraduate)</p>
-                <ul class="bullet-points">
-                    <li><strong>Cumulative GPA:</strong> 3.8 / 4.5 (Major Core GPA: 3.5 / 4.5)</li>
-                    <li><strong>Honors:</strong> Academic Excellence Scholarship (Merit-based tuition exemption)</li>
-                    <li><strong>Language Proficiency:</strong> IELTS 7.5</li>
-                </ul>
-            </div>
-        </section>
+.profile-cover-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="tags-wrapper">
-                <span class="badge"><i class="fas fa-code"></i> Python</span>
-                <span class="badge"><i class="fas fa-code"></i> C/C++</span>
-                <span class="badge"><i class="fab fa-java"></i> Java</span>
-                <span class="badge"><i class="fas fa-file-code"></i> HTML/CSS</span>
-                <span class="badge"><i class="fas fa-database"></i> SQL</span>
-                
-                <span class="badge"><i class="fas fa-layer-group"></i> PyTorch</span>
-                <span class="badge"><i class="fas fa-robot"></i> Hugging Face</span>
-                <span class="badge"><i class="fab fa-git-alt"></i> Git</span>
-                <span class="badge"><i class="fab fa-linux"></i> Linux</span>
-                <span class="badge"><i class="fab fa-raspberry-pi"></i> Raspberry Pi</span>
-                
-                <span class="badge"><i class="fas fa-brain"></i> NLP</span>
-                <span class="badge"><i class="fas fa-network-wired"></i> LLM Alignment</span>
-                <span class="badge"><i class="fas fa-chart-line"></i> Model Evaluation</span>
-            </div>
-        </section>
+.profile-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
-        <section id="interests">
-            <h2>Interests & Passions</h2>
-            <div class="tags-wrapper">
-                <span class="badge"><i class="fas fa-shuttlecock"></i> Badminton</span>
-                <span class="badge"><i class="fas fa-keyboard"></i> Custom Mechanical Keyboards</span>
-                <span class="badge"><i class="fas fa-brain"></i> Human Psychology & Philosophy</span>
-                <span class="badge"><i class="fas fa-book-open"></i> Sci-Fi Literature</span>
-            </div>
-        </section>
+.header-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
 
-    </main>
+.header-text .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Nguyen Nhat Minh. Built with clean HTML & CSS.</p>
-        </div>
-    </footer>
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+}
 
-</body>
-</html>
+.social-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.35rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 12px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.card .date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.organization, .degree {
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 12px;
+}
+
+.bullet-points {
+    list-style-type: none;
+}
+
+.bullet-points li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    font-size: 0.98rem;
+}
+
+.bullet-points li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background-color: var(--accent-light);
+    color: var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.badge:hover {
+    background-color: #d1ebd9;
+    border-color: rgba(27, 67, 50, 0.15);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 30px 0;
+    }
+    
+    .profile-cover-container {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .card .date {
+        margin-left: 0;
+    }
+}
