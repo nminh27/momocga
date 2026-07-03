@@ -31,42 +31,35 @@ body {
     padding: 0 20px;
 }
 
-/* --- HEADER --- */
-header {
-    padding: 60px 0 40px 0;
-    border-bottom: 1px solid var(--border-color);
-    background-color: #ffffff;
-}
-
-header h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-}
-
-header .subtitle {
-    font-size: 1.1rem;
-    color: var(--text-muted);
+/* --- HEADER MỚI (DẠNG KHỐI TỪ TRÊN XUỐNG) --- */
+.profile-cover-container {
+    width: 100%;
+    height: 300px; /* Bạn có thể tăng giảm số này để làm ảnh cao/thấp đi */
+    border-radius: 8px; /* Bo góc nhẹ cho khung ảnh */
+    overflow: hidden;
     margin-bottom: 20px;
 }
 
-.social-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
+.profile-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+    object-position: center; /* Canh giữa ảnh */
 }
 
-.social-links a:hover {
+/* Căn chỉnh lại khoảng cách ở Header */
+.header-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--accent-color);
-    text-decoration: underline;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
 }
 
-.social-links i {
-    margin-right: 5px;
+.header-text .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
 }
 
 /* --- NỘI DUNG CHÍNH (MAIN) --- */
@@ -144,30 +137,31 @@ h2 {
     font-weight: bold;
 }
 
-/* --- SKILLS GRID --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+/* --- ĐỊNH DẠNG TAGS CHUNG CHO SKILLS VÀ INTERESTS --- */
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Khoảng cách giữa các viên thuốc */
 }
 
-.skill-category {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 20px;
-}
-
-.skill-category h3 {
-    font-size: 1rem;
+.badge {
+    background-color: var(--accent-light);
     color: var(--accent-color);
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 5px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
 }
 
-.skill-category p {
-    font-size: 0.95rem;
+.badge:hover {
+    background-color: #d1ebd9; /* Hiệu ứng đổi màu nhẹ khi di chuột vào */
+}
+
+.badge i {
+    margin-right: 8px; /* Khoảng cách giữa icon và chữ */
 }
 
 /* --- INTERESTS TAGS --- */
